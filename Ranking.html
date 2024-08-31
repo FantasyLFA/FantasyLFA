@@ -1,0 +1,103 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estadisticas</title>
+        <link rel="shortcut icon" href="../Imagenes/logoPesta.png" />
+        <link rel="stylesheet" href="../style.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossringin="anonymous"></script>
+
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+        <img src="../Imagenes/logo.png" alt="logo de la pagina" class="logo">
+        </a>
+        <ul>
+            <li><a href="../index.html">Inicio</a></1i>
+            <li><a href="Estadisticas.html">Estadisticas</a></1i>
+            <li><a href="Paternidades.html">Paternidades</a></1i>
+            <li><a href="Ranking.html">Ranking</a></1i>
+            <li><a href="Galardones.html">Champions</a></1i>
+        </ul>
+    </nav>
+
+    <div class="rankingimg">
+        <img src="../Imagenes/Ranking.png" alt="ranking">
+    </div>
+    <div class="rankingS">
+        <section class="ranking1">
+            <table id="tabla">
+                <tr>
+                  <th>Pos</th>
+                  <th>Nombre</th>
+                  <th>Puntos</th>
+                </tr>
+                <tr>
+                  <td class="pos">1</td>
+                  <td id="nombre1"></td>
+                  <td class="puntos" id="puntos1"></td>
+                </tr>
+                <tr>
+                  <td class="pos">2</td>
+                  <td id="nombre2"></td>
+                  <td class="puntos" id="puntos2"></td>
+                </tr>
+                <tr>
+                  <td class="pos">3</td>
+                  <td id="nombre3"></td>
+                  <td class="puntos" id="puntos3"></td>
+                </tr>
+                <tr>
+                  <td class="pos">4</td>
+                  <td id="nombre4"></td>
+                  <td class="puntos" id="puntos4"></td>
+                </tr>
+                <tr>
+                  <td class="pos">5</td>
+                  <td id="nombre5"></td>
+                  <td class="puntos" id="puntos5"></td>
+                </tr>
+                <tr>
+                  <td class="pos">6</td>
+                  <td id="nombre6"></td>
+                  <td class="puntos" id="puntos6"></td>
+                </tr>
+                <tr>
+                  <td class="pos">7</td>
+                  <td id="nombre7"></td>
+                  <td class="puntos" id="puntos7"></td>
+                </tr>
+                <tr>
+                  <td class="pos">8</td>
+                  <td id="nombre8"></td>
+                  <td class="puntos" id="puntos8"></td>
+                </tr>
+              </table>
+        </section>
+        <section class="ranking2"> 
+            <h2 class="rankingh2">
+                <span>¿Cómo se evalúa el Ranking?</span>
+            </h2>
+            <p class="rankingExplicacion">
+              <span>Victoria: +10</span><br>
+              <span>Entrar a Playoffs (1ero o 2do): +25</span><br>
+              <span>Entrar a Playoffs (3ero o 4to): +20</span><br>
+              <span>Llegar a la final: +10</span><br>
+              <span>Salir campeón: +30</span><br>
+              <span>Cada 250 puntos totales: +1</span><br>
+              <span>Terminar 7mo u 8avo: -15</span><br><br>
+          
+              <span>Todos los puntos se dividen por la cantidad de partidos jugados en temporada regular.</span>
+            </p>
+        </section>          
+    </div>
+    <script src="../scriptRank.js"></script>
+</body>
+</html>

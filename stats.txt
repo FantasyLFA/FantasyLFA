@@ -1,0 +1,80 @@
+Emily	
+Victorias	42
+Win Rate	57.53
+Puntos totales	9410.74
+Point rate	128.91
+Puntos 2019	1704.78
+Puntos 2020	1814.88
+Puntos 2021	1970.04
+Puntos 2022	2047.52
+Puntos 2023	1873.52
+Juany	
+Victorias	44
+Win Rate	60.27
+Puntos totales	9627.3
+Point rate	131.88
+Puntos 2019	1501.6
+Puntos 2020	1769.2
+Puntos 2021	2237
+Puntos 2022	2036.44
+Puntos 2023	2083.06
+Latuf	
+Victorias	35
+Win Rate	47.95
+Puntos totales	9083.34
+Point rate	124.43
+Puntos 2019	1757.1
+Puntos 2020	1815.4
+Puntos 2021	1899.86
+Puntos 2022	1750.04
+Puntos 2023	1860.94
+Chevito	
+Victorias	29
+Win Rate	49.15
+Puntos totales	7353.4
+Point rate	124.63
+Puntos 2019	0
+Puntos 2020	1662.36
+Puntos 2021	1787.3
+Puntos 2022	2000.46
+Puntos 2023	1903.28
+Gaspe	
+Victorias	29
+Win Rate	39.73
+Puntos totales	9169.04
+Point rate	125.60
+Puntos 2019	1535.92
+Puntos 2020	2053.06
+Puntos 2021	1728.92
+Puntos 2022	1896.22
+Puntos 2023	1954.92
+Scrava	
+Victorias	35
+Win Rate	47.95
+Puntos totales	9472.8
+Point rate	129.76
+Puntos 2019	1499.98
+Puntos 2020	1784.3
+Puntos 2021	1937.3
+Puntos 2022	2087.1
+Puntos 2023	2164.12
+Landa	
+Victorias	36
+Win Rate	49.32
+Puntos totales	9537.54
+Point rate	130.65
+Puntos 2019	1623.6
+Puntos 2020	1888.78
+Puntos 2021	1828.58
+Puntos 2022	2079.98
+Puntos 2023	2116.6
+Naki	
+Victorias	17
+Win Rate	56.67
+Puntos totales	3939.14
+Point rate	131.30
+Puntos 2019	0
+Puntos 2020	0
+Puntos 2021	0
+Puntos 2022	2024
+Puntos 2023	1915.14

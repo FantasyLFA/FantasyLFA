@@ -1,0 +1,567 @@
+/* scroll y cursor ****************************************************/
+
+body::-webkit-scrollbar{
+    background-color: black;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 10px;
+}
+
+body{
+    cursor: url(./Imagenes/cursor.png),auto;
+    cursor: url(./Imagenes/cursor.png),crosshair;
+}
+a{
+    cursor: url(/Imagenes/pointer.png), pointer;
+}
+
+/* Fondo **********************************************************************/
+
+body{
+    background: url(./Imagenes/fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+/* menu arriba********************************************************************/
+
+nav{
+    background: #085bc7;
+    height: 10%;
+    width: 100%;
+}
+
+
+.enlace{
+    position: absolute;
+    padding: 0.1% 1%;
+}
+
+.logo{
+    height: 70px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 10vh;
+    margin: 0px 5px;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+li a:hover{
+    background: #000090;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.sectionIndex
+{
+background: url(./Imagenes/fondo.jpg) no-repeat;
+background-size: cover;
+background-position: center center;
+height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 858px){
+
+    .checkbtn{
+        display: block;
+        margin-top: 2%;
+    }
+
+    .enlace{
+        padding-top: 1.5%;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    
+    nav ul li a{
+        font-size: 20px;
+    }
+    
+    li a:hover{
+        background: none;
+        color: 085bc7;
+    }
+    
+    #check:checked ~ ul{
+        left:0;
+    }
+    
+}
+    
+/* fin menu arriba ********************************************************************/
+
+
+
+/* Pie de pagina inicial*****************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d; margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    height: 50%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+@media screen and (max-width:858px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
+/* Fin pie de pagina inicial*****************************************************************/
+
+/* Estadisticas ******************************************************************************************/
+
+.sectionEstadisticas{
+    margin-left: 6%;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    padding: 5%;
+}
+
+.EstadisticasF{
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 100%;
+}
+
+.imgEstadisticas{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 1;
+    filter: contrast(80%);
+    transition: 10 ease;
+}
+
+.sectionEstFond{
+    background: url(./Imagenes/fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 90%;
+    width: 100%;
+}
+
+.statsTexto{
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    left: 20%;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    visibility: hidden;
+    border-radius: 4px;
+}
+
+.EstadisticasF:hover{
+    cursor: url(/Imagenes/pointer.png), pointer;
+    width: 500%;
+    transition: 10 ease;
+    opacity: 1;
+    filter: contrast(120%);
+} 
+
+.EstadisticasF:hover > .statsTexto{
+    visibility: visible;
+}
+
+.statsVic{
+    top:10%
+}
+.statsWR{
+    top:20%
+}
+.statsPT{
+    top:30%
+}
+.statsPR{
+    top:40%
+}
+.stats19{
+    top:50%
+}
+.stats20{
+    top:60%
+}
+.stats21{
+    top:70%
+}
+.stats22{
+    top:80%
+}
+/* Fin Estadisticas ******************************************************************************************/
+
+/* galardones *************************************************************************************************/
+
+.GridLayout{
+    display: flex;
+    width: 100%;
+    align-self: center;
+    justify-items: center;
+    height: 12%;
+}
+
+.GridLayout img{
+    margin: 0 auto;
+    height: 100%;
+}
+.c1{
+    grid-column: 1/5;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.GalardonesD{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 25% auto auto auto;
+    padding: 1%;
+    width: 100%;
+    height: 80%;
+}
+
+.caja{
+    border: 4px solid black;
+    border-radius: 5px;
+    justify-self: center;
+    text-align: center;
+    height: 100%;
+    width: 80%;
+    margin: 1%;
+}
+
+article{
+    position: relative;
+    transition: all .3s ease;
+    background-color: white;
+}
+
+article img:first-child
+{
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+article img:last-child
+{
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+}
+
+article:hover{
+    transform: 
+    perspective(250px)
+    rotatex(10deg)
+    translateY(-5%)
+    translateZ(0);
+}
+
+article::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image:
+    linear-gradient(
+        to bottom, 
+        transparent 10%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0) 100%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover::before
+{
+    opacity: 1;
+}
+
+article:hover img:last-child{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+/* Ranking *******************************************************/
+
+.rankingimg{
+    display: flex;
+    margin-top: 2%;
+    width: 100%;
+    height: 15%;
+    align-self: center;
+    justify-items: center;
+}
+
+.rankingimg img{
+    height: 100%;
+    margin: 0 auto;
+}
+
+.rankingS{
+    display: grid;
+    grid-template-columns: 50% auto;
+    height: 100%;
+    width: 100%;
+}
+.ranking1{
+    display: flex;
+    grid-column: 1/2;
+    align-items: top;
+    margin-top: 4% ;
+}
+
+.ranking2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12%;
+}
+
+#tabla {
+    border-collapse: collapse;
+    width: 80%;
+    height: 70%;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+  
+#tabla th {
+    text-align: center;
+    background-color: #3f3f3f;
+    color: #fff;
+    padding: 0%;
+    font-size: 120%;
+    border: 1px solid black;
+
+}
+  
+#tabla td {
+    text-align: center;
+    padding: 1%;
+    border: 1px solid #ccc;
+}
+  
+#tabla tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+  
+#tabla td:first-child {
+    font-weight: bold;
+    color: #3f3f3f;
+}
+  
+#tabla td:nth-child(2n) {
+    font-weight: bold;
+    color: #3f3f3f;
+}
+  
+#tabla tr:first-child td {
+    border-top: none;
+}
+
+.pos{
+    width: 10%;
+}
+
+.puntos{
+    width: 30%;
+}
+
+.rankingh2 span{
+    background-color: rgba(255, 255, 255, 1);
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.rankingExplicacion span {
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
+    padding: 1%;
+    border-radius: 15px;
+    line-height: 2;
+}
+
+.rankingExplicacion {
+    margin-top: 3%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Fin Ranking ******************************************************/
+
+/* Paternidades ************************************************************/
+
+#MismaPersonaPa{
+    background-color: gray;
+}
+
+#PaternidadesTable {
+    padding: 5%;
+    border-collapse: collapse;
+    width: 80%;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+#PaternidadesTable th {
+    text-align: center;
+    background-color: #3f3f3f;
+    color: #fff;
+    padding: 1%;
+    font-size: 120%;
+    width: 11.11%;
+    border: 1px solid black;
+
+}
+
+#PaternidadesTable td {
+    text-align: center;
+    padding: 1%;
+    border: 1px solid #ccc;
+}
