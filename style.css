@@ -1,26 +1,26 @@
 /* scroll y cursor ****************************************************/
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     background-color: black;
     width: 10px;
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 10px;
 }
 
-body{
-    cursor: url(./Imagenes/cursor.png),auto;
-    cursor: url(./Imagenes/cursor.png),crosshair;
+body {
+    cursor: url(./Imagenes/cursor.png), auto;
+    cursor: url(./Imagenes/cursor.png), crosshair;
 }
-a{
+a {
     cursor: url(/Imagenes/pointer.png), pointer;
 }
 
 /* Fondo **********************************************************************/
 
-body{
+body {
     background: url(./Imagenes/fondo.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
@@ -29,34 +29,33 @@ body{
 
 /* menu arriba********************************************************************/
 
-nav{
+nav {
     background: #085bc7;
     height: 10%;
     width: 100%;
 }
 
-
-.enlace{
+.enlace {
     position: absolute;
     padding: 0.1% 1%;
 }
 
-.logo{
+.logo {
     height: 70px;
 }
 
-nav ul{
+nav ul {
     float: right;
     margin-right: 20px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     line-height: 10vh;
     margin: 0px 5px;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     font-size: 18px;
     padding: 7px 13px;
@@ -64,12 +63,12 @@ nav ul li a{
     text-transform: uppercase;
 }
 
-li a:hover{
+li a:hover {
     background: #000090;
     transition: .5s;
 }
 
-.checkbtn{
+.checkbtn {
     font-size: 30px;
     color: #fff;
     float: right;
@@ -79,39 +78,37 @@ li a:hover{
     display: none;
 }
 
-#check{
+#check {
     display: none;
 }
 
-.sectionIndex
-{
-background: url(./Imagenes/fondo.jpg) no-repeat;
-background-size: cover;
-background-position: center center;
-height: calc(100vh - 80px);
+.sectionIndex {
+    background: url(./Imagenes/fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
 }
 
-@media (max-width: 952px){
-    .enlace{
+@media (max-width: 952px) {
+    .enlace {
         padding-left: 20px;
     }
-    nav ul li a{
+    nav ul li a {
         font-size: 16px;
     }
 }
 
+@media (max-width: 858px) {
 
-@media (max-width: 858px){
-
-    .checkbtn{
+    .checkbtn {
         display: block;
         margin-top: 2%;
     }
 
-    .enlace{
+    .enlace {
         padding-top: 1.5%;
     }
-    ul{
+    ul {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -121,35 +118,33 @@ height: calc(100vh - 80px);
         text-align: center;
         transition: all .5s;
     }
-    
-    nav ul li{
+
+    nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    
-    nav ul li a{
+
+    nav ul li a {
         font-size: 20px;
     }
-    
-    li a:hover{
+
+    li a:hover {
         background: none;
-        color: 085bc7;
+        color: #085bc7;
     }
-    
-    #check:checked ~ ul{
-        left:0;
+
+    #check:checked ~ ul {
+        left: 0;
     }
-    
 }
-    
+
 /* fin menu arriba ********************************************************************/
 
-
-
 /* Pie de pagina inicial*****************************************************************/
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -157,26 +152,26 @@ height: calc(100vh - 80px);
     font-family: 'Open Sans', sans-serif;
 }
 
-.pie-pagina{
+.pie-pagina {
     width: 100%;
-    background-color: #0a141d; margin: 0;
+    background-color: #0a141d;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
 }
 
-.pie-pagina .grupo-1{
+.pie-pagina .grupo-1 {
     width: 100%;
     height: 50%;
     max-width: 1200px;
     margin: auto;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
+    grid-gap: 50px;
     padding: 45px 0px;
 }
 
-.pie-pagina .grupo-1 .box figure{
+.pie-pagina .grupo-1 .box figure {
     width: 50%;
     height: 50%;
     display: flex;
@@ -184,22 +179,22 @@ height: calc(100vh - 80px);
     align-items: center;
 }
 
-.pie-pagina .grupo-1 .box figure img{
+.pie-pagina .grupo-1 .box figure img {
     width: 250px;
 }
 
-.pie-pagina .grupo-1 .box h2{
+.pie-pagina .grupo-1 .box h2 {
     color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
 }
 
-.pie-pagina .grupo-1 .box p{
+.pie-pagina .grupo-1 .box p {
     color: #efefef;
     margin-bottom: 10px;
 }
 
-.pie-pagina .grupo-1 .red-social a{
+.pie-pagina .grupo-1 .red-social a {
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -212,26 +207,26 @@ height: calc(100vh - 80px);
     transition: all 300ms ease;
 }
 
-.pie-pagina .grupo-1 .red-social a:hover{
+.pie-pagina .grupo-1 .red-social a:hover {
     color: aqua;
 }
 
-.pie-pagina .grupo-2{
+.pie-pagina .grupo-2 {
     background-color: #0a1a2a;
     padding: 15px 10px;
     text-align: center;
     color: #fff;
 }
 
-.pie-pagina .grupo-2 small{
+.pie-pagina .grupo-2 small {
     font-size: 15px;
 }
 
-@media screen and (max-width:858px){
-    .pie-pagina .grupo-1{
+@media screen and (max-width: 858px) {
+    .pie-pagina .grupo-1 {
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
+        grid-gap: 30px;
         padding: 35px 0px;
     }
 }
@@ -240,13 +235,16 @@ height: calc(100vh - 80px);
 
 /* Estadisticas ******************************************************************************************/
 
-.sectionEstadisticas{
+.sectionEstadisticas {
     margin-left: 6%;
     display: flex;
     width: 90%;
     height: 100%;
     padding: 5%;
 }
+
+
+
 
 .EstadisticasF{
     display: flex;
@@ -256,7 +254,8 @@ height: calc(100vh - 80px);
 }
 
 .imgEstadisticas{
-    width: 0px;
+    width: 30px;
+    height: 300;
     flex-grow: 1;
     object-fit: cover;
     opacity: 1;
@@ -317,6 +316,12 @@ height: calc(100vh - 80px);
 }
 .stats22{
     top:80%
+}
+.stats23{
+    top:90%
+}
+.stats24{
+    top:100%
 }
 /* Fin Estadisticas ******************************************************************************************/
 
