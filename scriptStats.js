@@ -6,15 +6,10 @@ function obtenerPalabrasSegundoYTercerRenglon() {
             const datos = this.responseText;
             const lineas = datos.split('\n');
 
-            console.log('Datos leídos:', lineas); // Verificamos que estamos leyendo bien los datos
-
-            if (lineas.length >= 99) { // Aseguramos que hay suficientes líneas
+            if (lineas.length >= 99) { // Comprobamos que hay suficientes líneas en el archivo
 
                 // Función para procesar a cada jugador usando un offset específico
                 function procesarJugador(offset, idSuffix) {
-                    console.log(`Procesando jugador ${idSuffix}, Offset: ${offset}`);
-                    console.log('Datos del jugador:', lineas.slice(offset, offset + 11)); // Mostramos las líneas que estamos procesando
-
                     document.getElementById(`victorias${idSuffix}`).textContent = lineas[offset + 1].split(/\s+/)[1];
                     document.getElementById(`winRate${idSuffix}`).textContent = lineas[offset + 2].split(/\s+/)[2] + '%';
                     document.getElementById(`puntosTotales${idSuffix}`).textContent = lineas[offset + 3].split(/\s+/)[2];
@@ -29,9 +24,9 @@ function obtenerPalabrasSegundoYTercerRenglon() {
 
                 // Procesar jugadores con sus offsets específicos
                 procesarJugador(0, "E");  // Emilio
-                procesarJugador(12, "J"); // Juany
-                procesarJugador(23, "N"); // Latuf
-                procesarJugador(34, "C"); // Chevito
+                procesarJugador(12, "J"); // Juany (offset 12)
+                procesarJugador(23, "N"); // Latuf (offset 23)
+                procesarJugador(34, "C"); // Chevito (offset 34)
                 procesarJugador(44, "G"); // Gaspe
                 procesarJugador(55, "S"); // Scrava
                 procesarJugador(66, "L"); // Landa
