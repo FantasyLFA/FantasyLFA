@@ -7,7 +7,6 @@ Puntos 2019	1704,78
 Puntos 2020	1814,88
 Puntos 2021	1970,04
 Puntos 2022	2047,52
-Puntos 2022	2047,52
 Puntos 2023	1873,52
 Puntos 2024	1430,32
 Juany	
