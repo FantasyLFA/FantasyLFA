@@ -255,7 +255,7 @@ li a:hover {
 
 .imgEstadisticas{
     width: 30px;
-    height: 300;
+    height: 400;
     flex-grow: 1;
     object-fit: cover;
     opacity: 1;
