@@ -16,8 +16,8 @@ function obtenerPalabrasSegundoYTercerRenglon() {
               const septimoRenglon = lineas[6];
               const octavoRenglon = lineas[7];
               const novenoRenglon = lineas[8];
-              const decimoRenglon = lineas[9];
-              const undecimoRenglon = lineas[10];
+            const decimoRenglon = lineas[10];
+              const undecimoRenglon = lineas[11];
 
               document.getElementById('victoriasE').textContent = segundoRenglon.split(/\s+/)[1];
               document.getElementById('winRateE').textContent = tercerRenglon.split(/\s+/)[2] + '%';
