@@ -11,11 +11,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-    cursor: url(cursor.png), auto;
-    cursor: url(cursor.png), crosshair;
+    cursor: url(cursor.png) auto;
+    cursor: url(cursor.png) crosshair;
 }
 a {
-    cursor: url(pointer.png), pointer;
+    cursor: url(pointer.png) pointer;
 }
 
 /* Fondo **********************************************************************/
