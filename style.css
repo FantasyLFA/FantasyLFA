@@ -11,11 +11,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-    cursor: url(./Imagenes/cursor.png), auto;
-    cursor: url(./Imagenes/cursor.png), crosshair;
+    cursor: url(cursor.png), auto;
+    cursor: url(cursor.png), crosshair;
 }
 a {
-    cursor: url(/Imagenes/pointer.png), pointer;
+    cursor: url(pointer.png), pointer;
 }
 
 /* Fondo **********************************************************************/
@@ -83,7 +83,7 @@ li a:hover {
 }
 
 .sectionIndex {
-    background: url(./Imagenes/fondo.jpg) no-repeat;
+    background: url(fondo.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     height: calc(100vh - 80px);
@@ -264,7 +264,7 @@ li a:hover {
 }
 
 .sectionEstFond{
-    background: url(./Imagenes/fondo.jpg) no-repeat;
+    background: url(fondo.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     height: 90%;
@@ -282,7 +282,7 @@ li a:hover {
 }
 
 .EstadisticasF:hover{
-    cursor: url(/Imagenes/pointer.png), pointer;
+    cursor: url(pointer.png), pointer;
     width: 500%;
     transition: 10 ease;
     opacity: 1;
