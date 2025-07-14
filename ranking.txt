@@ -1,9 +1,8 @@
-Naki	9,93
-Emily	8,94
-Juany	9,34
-Latuf	7,45
+Naki	10,29
+Emily	8,95
+Juany	9,48
+Latuf	7,60
 Scrava	7,27
 Landa	7,34
-Gaspe	6,08
-Chevito	6,82
-
+Gaspe	6,23
+Chevito	6,83
