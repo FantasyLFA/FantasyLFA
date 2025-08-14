@@ -139,6 +139,21 @@ li a:hover {
     }
 }
 
+.contador-wrapper {
+    display: flex;
+    justify-content: center; /* centrar horizontalmente */
+    margin-top: 50px;        /* separarlo un poco de arriba */
+}
+
+.contador-cuadro {
+    border: 3px solid black;       /* grosor y color del borde */
+    border-radius: 10px;           /* esquinas redondeadas */
+    display: inline-block;         /* ajusta al contenido */
+    background-color: white;       /* color de fondo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra para resaltar */
+}
+
+
 /* fin menu arriba ********************************************************************/
 
 /* Pie de pagina inicial*****************************************************************/
@@ -339,6 +354,7 @@ li a:hover {
     margin: 0 auto;
     height: 100%;
 }
+
 .c1{
     grid-column: 1/5;
     margin-bottom: 1%;
@@ -353,6 +369,7 @@ li a:hover {
     padding: 1%;
     width: 100%;
     height: 80%;
+    gap: 20px; /* Separación entre filas y columnas */
 }
 
 .caja{
@@ -371,15 +388,13 @@ article{
     background-color: white;
 }
 
-article img:first-child
-{
+article img:first-child{
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
     width: 100%;
     height: 100%;
 }
 
-article img:last-child
-{
+article img:last-child{
     position: absolute;
     width: 50%;
     bottom: 0;
@@ -417,8 +432,7 @@ article::before{
     transition: all .3s ease;
 }
 
-article:hover::before
-{
+article:hover::before{
     opacity: 1;
 }
 
@@ -426,6 +440,7 @@ article:hover img:last-child{
     opacity: 1;
     transform: translateY(10%);
 }
+
 
 /* Ranking *******************************************************/
 
