@@ -308,35 +308,18 @@ li a:hover {
     visibility: visible;
 }
 
-.statsVic{
-    top:10%
-}
-.statsWR{
-    top:20%
-}
-.statsPT{
-    top:30%
-}
-.statsPR{
-    top:40%
-}
-.stats19{
-    top:50%
-}
-.stats20{
-    top:60%
-}
-.stats21{
-    top:70%
-}
-.stats22{
-    top:80%
-}
-.stats23{
-    top:90%
-}
-.stats24{
-    top:100%
+.statsVic { top: 7% }
+.statsWR { top: 14% }
+.statsPT { top: 21% }
+.statsPR { top: 28% }
+.stats19 { top: 35% }
+.stats20 { top: 42% }
+.stats21 { top: 49% }
+.stats22 { top: 56% }
+.stats23 { top: 64% }
+.stats24 { top: 72% }
+
+
 }
 /* Fin Estadisticas ******************************************************************************************/
 
@@ -585,3 +568,4 @@ article:hover img:last-child{
     padding: 1%;
     border: 1px solid #ccc;
 }
+
