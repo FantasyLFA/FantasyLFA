@@ -269,7 +269,7 @@ li a:hover {
 
 .imgEstadisticas{
     width: 50px;
-    height: 500;
+    height: 450;
     flex-grow: 1;
     object-fit: cover;
     opacity: 1;
@@ -570,3 +570,4 @@ article:hover img:last-child{
     padding: 1%;
     border: 1px solid #ccc;
 }
+
