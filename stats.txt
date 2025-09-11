@@ -1,89 +1,98 @@
 Emily	
 Victorias	48
-Win Rate	65,75
-Puntos totales	13145,08
-Point rate	180,07
+Win Rate	53,93
+Puntos totales	13363,2
+Point rate	150,15
 Puntos 2019	1704,78
 Puntos 2020	1814,88
 Puntos 2021	1970,04
 Puntos 2022	2047,52
 Puntos 2022	2047,52
 Puntos 2023	1873,52
-Puntos 2024	1686,82
+Puntos 2024	1812,42
+Puntos 2025	92,52
 Juany	
-Victorias	51
-Win Rate	69,86
-Puntos totales	11663,22
-Point rate	159,77
+Victorias	52
+Win Rate	58,43
+Puntos totales	11957,8
+Point rate	134,36
 Puntos 2019	1501,6
 Puntos 2020	1769,2
 Puntos 2021	2237
 Puntos 2022	2036,44
 Puntos 2023	2083,06
-Puntos 2024	2035,92
+Puntos 2024	2223,02
+Puntos 2025	107,48
 Latuf	
-Victorias	42
-Win Rate	57,53
-Puntos totales	11012,22
-Point rate	150,85
+Victorias	44
+Win Rate	49,44
+Puntos totales	11317,68
+Point rate	127,16
 Puntos 2019	1757,1
 Puntos 2020	1815,4
 Puntos 2021	1899,86
 Puntos 2022	1750,04
 Puntos 2023	1860,94
-Puntos 2024	1928,88
+Puntos 2024	2079,48
+Puntos 2025	154,86
 Chevito	
-Victorias	36
-Win Rate	61,02
-Puntos totales	9373,34
-Point rate	158,87
+Victorias	37
+Win Rate	49,33
+Puntos totales	9632,74
+Point rate	128,44
 Puntos 2019	0
 Puntos 2020	1662,36
 Puntos 2021	1787,3
 Puntos 2022	2000,46
 Puntos 2023	1903,28
-Puntos 2024	2019,94
+Puntos 2024	2131,78
+Puntos 2025	147,56
 Gaspe	
-Victorias	36
-Win Rate	49,32
-Puntos totales	11004,76
-Point rate	150,75
+Victorias	38
+Win Rate	42,70
+Puntos totales	11288,22
+Point rate	126,83
 Puntos 2019	1535,92
 Puntos 2020	2053,06
 Puntos 2021	1728,92
 Puntos 2022	1896,22
 Puntos 2023	1954,92
-Puntos 2024	1835,72
+Puntos 2024	1977,7
+Puntos 2025	141,48
 Scrava	
-Victorias	43
-Win Rate	58,90
-Puntos totales	11340,08
-Point rate	155,34
+Victorias	44
+Win Rate	49,44
+Puntos totales	11624,22
+Point rate	130,61
 Puntos 2019	1499,98
 Puntos 2020	1784,3
 Puntos 2021	1937,3
 Puntos 2022	2087,1
 Puntos 2023	2164,12
-Puntos 2024	1867,28
+Puntos 2024	2024
+Puntos 2025	127,42
 Landa	
 Victorias	43
-Win Rate	58,90
-Puntos totales	11433,82
-Point rate	156,63
+Win Rate	48,31
+Puntos totales	11643,54
+Point rate	130,83
 Puntos 2019	1623,6
 Puntos 2020	1888,78
 Puntos 2021	1828,58
 Puntos 2022	2079,98
 Puntos 2023	2116,6
-Puntos 2024	1896,28
+Puntos 2024	1995,82
+Puntos 2025	110,18
 Naki	
-Victorias	24
-Win Rate	80,00
-Puntos totales	5757
-Point rate	191,90
+Victorias	25
+Win Rate	54,35
+Puntos totales	6044,22
+Point rate	131,40
 Puntos 2019	0
 Puntos 2020	0
 Puntos 2021	0
 Puntos 2022	2024
 Puntos 2023	1915,14
-Puntos 2024	1817,86
+Puntos 2024	1993,7
+Puntos 2025	111,38
+
