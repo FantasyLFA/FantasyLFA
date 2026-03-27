@@ -20,12 +20,19 @@ a {
 
 /* Fondo **********************************************************************/
 
+html {
+    min-height: 100%; /* Le avisa al navegador que la página entera debe cubrir el fondo */
+}
+
 body {
     background: url(fondo.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
-    height: calc(100vh - 80px);
-}
+    background-attachment: fixed; /* <--- LA SOLUCIÓN  Fija la imagen */
+    min-height: 100vh; /* Asegura que cubra AL MENOS el 100% de la pantalla visible */
+    height: auto;      /* Y permite que crezca si el contenido es más largo */
+    margin: 0;         /* Importante: asegura que no haya márgenes rebeldes */
+}   
 
 /* menu arriba********************************************************************/
 
@@ -33,6 +40,8 @@ nav {
     background: #085bc7;
     height: 10%;
     width: 100%;
+    position: relative; /* menu */
+    z-index: 9999;      /* menu */
 }
 
 .enlace {
@@ -83,10 +92,8 @@ li a:hover {
 }
 
 .sectionIndex {
-    background: url(fondo.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px); /* Ocupa al menos lo que queda de pantalla */
+    height: auto;                   /* Crece con el contenido */
 }
 
 @media (max-width: 952px) {
@@ -117,6 +124,7 @@ li a:hover {
         left: -100%;
         text-align: center;
         transition: all .5s;
+        z-index: 9999; /* <--- arreglo menu (espero) */
     }
 
     nav ul li {
@@ -269,7 +277,7 @@ li a:hover {
 
 .imgEstadisticas{
     width: 50px;
-    height: 410;
+    height: 500;
     flex-grow: 1;
     object-fit: cover;
     opacity: 1;
@@ -281,9 +289,9 @@ li a:hover {
     background: url(fondo.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
-    min-height: 90vh; /* Que ocupe toda la pantalla */
-
-    height: 90%;
+/* --- CAMBIAR ESTO --- */
+    min-height: calc(100vh - 80px); /* Ocupa lo que queda de pantalla */
+    height: auto;                   /* Crece con el contenido vertical */
     width: 100%;
 }
 
@@ -571,4 +579,103 @@ article:hover img:last-child{
     border: 1px solid #ccc;
 }
 
+/* ========================================================
+   DISEÑO RESPONSIVE (Móviles y Tablets)
+   ======================================================== */
 
+/* --- 1. ESTADÍSTICAS --- 
+   Pasa de ser un acordeón horizontal a uno vertical en celulares */
+@media screen and (max-width: 858px) {
+    .sectionEstadisticas {
+        flex-direction: column; /* Apila las fotos una abajo de la otra */
+        height: auto; 
+    }
+
+    .EstadisticasF {
+        width: 100%;
+        height: 120px; /* Altura de cada foto cuando está "cerrada" */
+        margin-bottom: 5px;
+    }
+
+    .EstadisticasF:hover {
+        width: 100%; /* Anulamos el width: 500% de PC */
+        height: 400px; /* Se expande hacia abajo al tocar la foto */
+    }
+    
+    .imgEstadisticas {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que las caras no se deformen */
+    }
+}
+
+/* --- 2. CHAMPIONS / GALARDONES --- 
+   Ajusta la grilla para que no queden todas las cajas apretadas */
+@media screen and (max-width: 1024px) {
+    .GalardonesD {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .GalardonesD {
+        grid-template-columns: 1fr; /* 1 columna sola en celulares */
+    }
+    
+    .caja {
+        width: 90%; 
+    }
+}
+
+/* --- 3. RANKING --- 
+   Pasa la tabla abajo de la explicación en lugar de estar al lado */
+@media screen and (max-width: 858px) {
+    .rankingS {
+        grid-template-columns: 1fr; /* 1 sola columna */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ranking1, .ranking2 {
+        margin-top: 5%;
+    }
+
+    #tabla {
+        width: 95%; /* Que la tabla ocupe casi todo el ancho */
+    }
+
+    .rankingimg img {
+        width: 80%; /* Achica el título de Ranking para que entre bien */
+        height: auto;
+    }
+}
+
+/* --- 4. PATERNIDADES --- */
+@media screen and (max-width: 858px) {
+    #PaternidadesTable {
+        display: block;
+        width: 100% !important; /* Fuerza el ancho completo, eliminando el margen de 95% */
+        margin: 0 !important;   /* Alinea la tabla a la izquierda, quitando el centrado */
+        padding: 0 !important;
+        overflow-x: auto; /* Mantiene el scroll horizontal */
+        white-space: nowrap; /* Evita que los datos se amontonen verticalmente */
+        box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.5); /* Sombra para indicar scroll */
+    }
+
+  /*  Congelamos la primera columna (nombres de la izquierda) */
+    #PaternidadesTable th:first-child {
+        position: sticky;
+        left: 0;
+        background-color: #3f3f3f; 
+        color: white; 
+        z-index: 2; 
+        border-right: 2px solid black; 
+        
+        /* Ajustes para achicar la columna --- */
+        width: 75px;           /* Forzamos un ancho más angosto */
+        min-width: 75px;       /* Evita que se achique de más y rompa la palabra */
+        white-space: normal;   /* Permite que "Totales (Playoffs)" baje al siguiente renglón */
+        font-size: 90%;        /* Achicamos apenitas la letra para que encaje perfecto */
+        padding: 5px 2px;      /* Reducimos el relleno interno para ganar más espacio */
+    }
+}
