@@ -678,4 +678,11 @@ article:hover img:last-child{
         font-size: 90%;        /* Achicamos apenitas la letra para que encaje perfecto */
         padding: 5px 2px;      /* Reducimos el relleno interno para ganar más espacio */
     }
+    
+    /* --- Ensanchar las columnas de los resultados --- */
+    #PaternidadesTable td, 
+    #PaternidadesTable th:not(:first-child) {
+        min-width: 95px; /* Fuerza a que cada columna mida al menos esto */
+        padding: 8px 5px !important; /* Le da un poquito de aire arriba/abajo y a los costados */
+    }
 }
