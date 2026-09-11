@@ -28,7 +28,7 @@ s-k	5-3 (0-0)
 s-j	8-11 (0-1)
 Relleno	
 Relleno	
-Landa	
+Nehue	
 n-e	6-8 (0-0)
 n-g	11-9 (0-1)
 n-s	8-6 (0-0)
