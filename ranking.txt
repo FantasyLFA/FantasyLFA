@@ -1,8 +1,9 @@
-Naki	5,60
-Emily	6,43
-Juany	8,85
-Latuf	7,07
-Scrava	6,30
-Nehue	5,86
-Gaspe	6,30
-Chevito	5,28
+Naki	5,76
+Emily	6,41
+Juany	8,69
+Latuf	6,94
+Scrava	6,38
+Nehue	5,76
+Gaspe	6,28
+Chevito	5,40
+

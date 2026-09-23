@@ -1,43 +1,91 @@
-function obtenerPalabrasSegundoYTercerRenglon() {
-    const xhttp = new XMLHttpRequest();
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Llamamos al archivo txt
+    fetch('stats.txt')
+        .then(response => {
+            if (!response.ok) throw new Error("No se pudo cargar el archivo");
+            return response.text();
+        })
+        .then(data => procesarEstadisticas(data))
+        .catch(error => console.error('Error al cargar stats.txt:', error));
+});
 
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            const datos = this.responseText;
-            const lineas = datos.split('\n');
+function procesarEstadisticas(data) {
+    // 2. Convertir el texto en un diccionario organizado
+    const lineas = data.split('\n');
+    const jugadores = {};
+    let jugadorActual = "";
 
-            if (lineas.length >= 99) { // Comprobamos que hay suficientes líneas en el archivo
+    lineas.forEach(linea => {
+        // Limpiamos saltos de línea extra
+        linea = linea.replace('\r', '');
+        if (linea.trim() === '') return;
 
-                // Función para procesar a cada jugador usando un offset específico
-                function procesarJugador(offset, idSuffix) {
-                    document.getElementById(`victorias${idSuffix}`).textContent = lineas[offset + 1].split(/\s+/)[1];
-                    document.getElementById(`winRate${idSuffix}`).textContent = lineas[offset + 2].split(/\s+/)[2] + '%';
-                    document.getElementById(`puntosTotales${idSuffix}`).textContent = lineas[offset + 3].split(/\s+/)[2];
-                    document.getElementById(`pointRate${idSuffix}`).textContent = lineas[offset + 4].split(/\s+/)[2];
-                    document.getElementById(`puntos2019${idSuffix}`).textContent = lineas[offset + 5].split(/\s+/)[2];
-                    document.getElementById(`puntos2020${idSuffix}`).textContent = lineas[offset + 6].split(/\s+/)[2];
-                    document.getElementById(`puntos2021${idSuffix}`).textContent = lineas[offset + 7].split(/\s+/)[2];
-                    document.getElementById(`puntos2022${idSuffix}`).textContent = lineas[offset + 8].split(/\s+/)[2];
-                    document.getElementById(`puntos2023${idSuffix}`).textContent = lineas[offset + 9].split(/\s+/)[2];
-                    document.getElementById(`puntos2024${idSuffix}`).textContent = lineas[offset + 10].split(/\s+/)[2];
-                }
+        // Separar por tabulaciones (como vienen las columnas en tu archivo txt)
+        const partes = linea.split('\t');
 
-                // Procesar jugadores con sus offsets específicos
-                procesarJugador(0, "E");  // Emilio
-                procesarJugador(12, "J"); // Juany (offset 12)
-                procesarJugador(23, "N"); // Latuf (offset 23)
-                procesarJugador(34, "C"); // Chevito (offset 34)
-                procesarJugador(44, "G"); // Gaspe
-                procesarJugador(55, "S"); // Scrava
-                procesarJugador(66, "L"); // Landa
-                procesarJugador(77, "K"); // Naki
+        // Si solo hay una columna o la segunda está vacía, es el nombre del jugador
+        if (partes.length === 1 || partes[1].trim() === '') {
+            jugadorActual = partes[0].trim().toLowerCase();
+            jugadores[jugadorActual] = {};
+        } else {
+            // Es un dato estadístico
+            const clave = partes[0].trim();
+            const valor = partes[1].trim();
+            if (jugadorActual) {
+                jugadores[jugadorActual][clave] = valor;
             }
         }
+    });
+
+    // 3. Diccionario que conecta el nombre de la estadística en el txt con tu clase CSS del HTML
+    const mapeoClases = {
+        'Victorias': 'statsVic',
+        'Win Rate': 'statsWR',
+        'Puntos totales': 'statsPT',
+        'Point rate': 'statsPR',
+        'Puntos 2019': 'stats19',
+        'Puntos 2020': 'stats20',
+        'Puntos 2021': 'stats21',
+        'Puntos 2022': 'stats22',
+        'Puntos 2023': 'stats23',
+        'Puntos 2024': 'stats24',
+        'Puntos 2025': 'stats25',
+        'Puntos 2026': 'stats26' 
     };
 
-    xhttp.open('GET', 'stats.txt', true);
-    xhttp.send();
-}
+    // 4. Volcar los datos en el DOM (HTML)
+    const figuras = document.querySelectorAll('.EstadisticasF');
 
-// Llamamos a la función cuando la página esté cargada
-window.onload = obtenerPalabrasSegundoYTercerRenglon;
+    figuras.forEach(figura => {
+        const idJugador = figura.getAttribute('data-jugador');
+
+        if (idJugador && jugadores[idJugador]) {
+            const estadisticas = jugadores[idJugador];
+
+            // Recorremos las métricas del jugador
+            for (const [claveTxt, valorTxt] of Object.entries(estadisticas)) {
+                const nombreClaseCSS = mapeoClases[claveTxt];
+                
+                if (nombreClaseCSS) {
+                    let parrafo = figura.querySelector(`.${nombreClaseCSS}`);
+
+                    // Si la estadística existe en el txt pero no en el HTML (Ej: Puntos 2026), la creamos al vuelo
+                    if (!parrafo) {
+                        parrafo = document.createElement('p');
+                        parrafo.className = `statsTexto ${nombreClaseCSS}`;
+                        figura.appendChild(parrafo);
+                    }
+
+                    // Formateamos para asegurarnos de que el Win Rate tenga su símbolo de porcentaje
+                    let textoFinal = `${claveTxt}: ${valorTxt}`;
+                    if (claveTxt === 'Win Rate' && !textoFinal.includes('%')) {
+                        textoFinal += '%';
+                    }
+
+                    // Actualizamos el contenido
+                    parrafo.textContent = textoFinal;
+                }
+            }
+        }
+    });
+}
